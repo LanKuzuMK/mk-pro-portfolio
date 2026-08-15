@@ -358,3 +358,104 @@ button:not(:disabled),a[href],[role=button] { -webkit-tap-highlight-color:transp
 .repository-card-actions button,.repository-card-actions a { flex:1 0 auto; justify-content:center; min-inline-size:max-content; white-space:nowrap; }
 .repository-card--embedded .repository-card-actions { gap:7px; }
 @media (max-width:420px) { .repository-card-actions button,.repository-card-actions a { flex-basis:100%; } }
+
+/* Mobile hero composition: preserve the cinematic language while giving every element a readable zone. */
+@media (max-width:720px) {
+  .hero-scene {
+    display:block;
+    min-height:clamp(980px, 154svh, 1220px);
+    overflow:hidden;
+    padding:104px 20px 188px;
+  }
+
+  .hero-world {
+    object-position:64% center;
+    opacity:.42;
+  }
+
+  .hero-veil {
+    background:linear-gradient(180deg,rgba(10,7,8,.74) 0%,rgba(10,7,8,.44) 38%,rgba(10,7,8,.72) 76%,#0a0708 100%);
+  }
+
+  .hero-copy-motion {
+    position:relative!important;
+    inset:auto!important;
+    transform:none!important;
+    width:100%;
+    z-index:5;
+  }
+
+  .hero-copy {
+    margin:0 auto;
+    max-width:480px;
+    width:100%;
+  }
+
+  .hero-copy h1 {
+    font-size:clamp(3.55rem,15.2vw,5.7rem);
+    line-height:.86;
+    max-width:100%;
+  }
+
+  .hero-body {
+    background:rgba(10,7,8,.54);
+    border-left:2px solid rgba(216,43,54,.78);
+    margin-top:24px;
+    max-width:34rem;
+    padding:12px 14px;
+  }
+
+  .hero-tech-strip {
+    margin-top:18px;
+  }
+
+  .hero-tech-strip > div {
+    flex-wrap:wrap;
+    gap:6px;
+  }
+
+  .hero-skill-summary {
+    margin-top:18px;
+    max-width:none;
+  }
+
+  .hero-portrait-wrap {
+    height:clamp(360px,66vw,500px);
+    margin:34px -20px 0;
+    position:relative!important;
+    transform:none!important;
+    width:calc(100% + 40px);
+    z-index:3;
+  }
+
+  .hero-portrait {
+    object-fit:cover;
+    object-position:58% center;
+  }
+
+  .portrait-caption {
+    bottom:18px;
+    right:22px;
+  }
+
+  .draw-button {
+    margin-top:22px!important;
+    position:relative!important;
+    z-index:8;
+  }
+}
+
+@media (max-width:390px) {
+  .hero-scene {
+    padding-inline:16px;
+  }
+
+  .hero-portrait-wrap {
+    margin-inline:-16px;
+    width:calc(100% + 32px);
+  }
+
+  .hero-copy h1 {
+    font-size:clamp(3.2rem,15.6vw,4.65rem);
+  }
+}
