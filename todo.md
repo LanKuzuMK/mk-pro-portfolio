@@ -15,3 +15,4 @@
 - [x] Provide simple GitHub and Cloudflare passkey or 2FA setup instructions.
 - [x] Verify and clean the GitHub commit history and repository metadata of platform-specific attribution.
 - [x] Improve the mobile hero composition so text, artwork, capability cards, and controls do not visually collide on phone screens.
+- [x] Remove the Google AI Studio-branded repository preview asset and replace the README with clean owner-facing documentation.
